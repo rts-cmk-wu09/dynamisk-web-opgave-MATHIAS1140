@@ -1,5 +1,6 @@
-@import url(base.css);
 @import url(font.css);
-@import url(hero.css);
-@import url(card.css);
 @import url(variabler.css);
+@import url(base.css);
+@import url(hero.css);
+@import url(servicesCards.css);
+@import url(facilitiesCards.css);
