@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // heroBox slut
   // hero section slut------------------------------------------------------
 
-  // card start------------------------------------------------------
+  // card start-------------------------------------------------------------
   // Henter min section med klassen = .services i HTML
   let servicesSection = document.querySelector(".services");
   // her laver jeg et loop, på de sectioner "cards" der skal ligge inde i min section - .services
@@ -45,13 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // her skaber jeg en klasse til min article
     cards.classList = "cards-article";
 
-    // her laver jeg et element i min html, hvor jeg kan ligge img ind
+    // her laver jeg et element i min HTML, som ligger i min nye article.
     let image = document.createElement("img");
     let heading = document.createElement("h3");
     let text = document.createElement("p");
     let link = document.createElement("a");
 
-    // her henter jeg data og tilføjer dem i min nybyggede elementer
+    // her henter jeg data og tilføjer dem i min nybyggede elementer.
     image.src = service.illustration;
     heading.textContent = service.headline;
     text.textContent = service.text;
@@ -63,33 +63,49 @@ document.addEventListener("DOMContentLoaded", function () {
     cards.append(text);
     cards.append(link);
 
-    //  her appender jeg mine nye elementer og min data ind i min .services
+    //  her appender jeg mine nye elementer og min data ind i min .services (querySelector)
     servicesSection.append(cards);
-    // card slut------------------------------------------------------
-
+    // card slut-------------------------------------------------------------
+  });
     // facilities start------------------------------------------------------
+    
     let facilitiesSection = document.querySelector(".facilities");
+    
     let headingTwo = document.createElement("h2");
     headingTwo.textContent = facilities.headline;
-
-    facilities.forEach((facility) => {
+    facilitiesSection.append(headingTwo);
+    headingTwo.classList = "h2-overskrift"
+    
+    let wrapper = document.createElement("div")
+    wrapper.classList = "wrapper"
+    facilitiesSection.append(wrapper)
+    
+    facilities.options.forEach((option) => {
       let facilitiesCards = document.createElement("article");
-
-      let icon = document.createElement("icon");
+      facilitiesCards.classList = "facilitiesCards";
+      
+      let image = document.createElement("img");
       let headline = document.createElement("h2");
       let text = document.createElement("p");
-
-      icon.src = facilities.icon;
-      headline.textContent = facilities.headline;
-      text.textContent = facilities.text;
-
-      facilitiesCards.append(icon);
-      facilitiesCards.append(heading);
+      let link = document.createElement("a");
+      
+      image.src = option.icon;
+      headline.textContent = option.headline;
+      text.textContent = option.text;
+      link.textContent = option.a;
+      
+      
+      facilitiesCards.append(image);
+      facilitiesCards.append(headline);
       facilitiesCards.append(text);
-
-      facilitiesSection.append(facilitiesCards);
+      facilitiesCards.append(link);
+      
+      
+      wrapper.append(facilitiesCards);
     });
+    
 
     // facilities slut-------------------------------------------------------
-  });
+
 });
+
