@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // hero section start---------------------------------------------------
+  // hero section start-----------------------------------------------------
   // hero image start
   const heroSection = document.querySelector(".hero");
   const heroImg = document.createElement("img");
@@ -65,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //  her appender jeg mine nye elementer og min data ind i min .services (querySelector)
     servicesSection.append(cards);
-    // card slut-------------------------------------------------------------
+    // card slut------------------------------------------------------------
   });
-  // facilities start------------------------------------------------------
+  // facilities start-------------------------------------------------------
 
   let facilitiesSection = document.querySelector(".facilities");
 
@@ -102,9 +102,9 @@ document.addEventListener("DOMContentLoaded", function () {
     wrapper.append(facilitiesCards);
   });
 
-  // facilities slut-------------------------------------------------------
+  // facilities slut--------------------------------------------------------
 
-  // sites start-------------------------------------------------------
+  // sites start------------------------------------------------------------
 
   let sitesSection = document.querySelector(".sites");
 
@@ -154,5 +154,44 @@ document.addEventListener("DOMContentLoaded", function () {
     sitesSection.append(sitesCards);
   });
 
-  // sites slut-------------------------------------------------------
+  // sites slut-------------------------------------------------------------
+
+  // advantages start-------------------------------------------------------
+  let advantagesSection = document.querySelector(".advantages");
+
+  let wrapperThree = document.createElement("div");
+  wrapperThree.classList = "wrapperThree";
+  advantagesSection.append(wrapperThree);
+
+  let headingFour = document.createElement("h2");
+  headingFour.textContent = advantages.headline;
+  advantagesSection.append(headingFour);
+  headingFour.classList = "h2-overskrift";
+
+
+  advantages.forEach((advantage) => {
+    let advantagesArticle = document.createElement("article");
+    advantagesArticle.classList = "advantagesArticle";
+
+    let image = document.createElement("img");
+    let headline = document.createElement("h2");
+    let text = document.createElement("p");
+
+    image.src = advantage.icon;
+    headline.textContent = advantage.headline;
+    text.textContent = advantage.text;
+
+    advantagesArticle.append(image);
+    advantagesArticle.append(headline);
+    advantagesArticle.append(text);
+
+    wrapperThree.append(advantagesArticle);
+  });
+  // advantages slut--------------------------------------------------------
+
+
+  // footer start-----------------------------------------------------------
+  
+
+  // footer slut------------------------------------------------------------
 });
