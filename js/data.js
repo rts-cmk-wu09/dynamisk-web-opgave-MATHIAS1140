@@ -72,16 +72,20 @@ let sites = {
       img: "https://dazzling-squirrel-77a63d.netlify.app/imgs/lucciano.png",
       name: "Lucciano",
       city: "Rome",
+      link: "View this site",
+
     },
     {
       img: "https://dazzling-squirrel-77a63d.netlify.app/imgs/cremonesi.png",
       name: "Cremonesi",
       city: "Florence",
+      link: "View this site",
     },
     {
       img: "https://dazzling-squirrel-77a63d.netlify.app/imgs/beneventi.png",
       name: "Beneventi",
       city: "Venice",
+      link: "View this site",
     },
   ],
 };

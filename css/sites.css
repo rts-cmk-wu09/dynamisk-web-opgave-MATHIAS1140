@@ -1,0 +1,65 @@
+.sites{
+ display: flex;
+ justify-content: space-evenly;
+ gap: 30px;
+ margin-left: 200px;
+ margin-right: 200px;
+ margin-top: 200px;
+}
+
+.h2-overskrift-three{
+    font-size: xx-large;
+}
+
+.heading-p{
+    font-size: small;
+    margin-top: 20px;
+}
+
+.btn{
+    width: 250px;
+    height: 65px;
+    background-color: var(--orangeTema-color);
+    border: none;
+    margin-top: 35px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: large;
+}
+
+.wrapperTwo{
+   display: flex;
+   flex-direction: column;
+   width: 270px;
+   height: 418px;
+}
+
+.sitesCards{
+   display: flex;
+   flex-direction: column;
+}
+
+
+.sitesCards > p {
+    margin-top: 10px;
+    font-size: small;
+}
+
+.sitesCards > h3 {
+    margin-top: 10px;
+}
+
+.sitesCards > a {
+   color: var(--orangeTema-color);
+   margin-top: 10px;
+   font-size: small;
+}
+
+.sitesCards > img{
+    width: 230px;
+    height: 418px;
+}
+

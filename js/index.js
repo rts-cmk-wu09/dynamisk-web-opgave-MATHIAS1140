@@ -67,45 +67,92 @@ document.addEventListener("DOMContentLoaded", function () {
     servicesSection.append(cards);
     // card slut-------------------------------------------------------------
   });
-    // facilities start------------------------------------------------------
-    
-    let facilitiesSection = document.querySelector(".facilities");
-    
-    let headingTwo = document.createElement("h2");
-    headingTwo.textContent = facilities.headline;
-    facilitiesSection.append(headingTwo);
-    headingTwo.classList = "h2-overskrift"
-    
-    let wrapper = document.createElement("div")
-    wrapper.classList = "wrapper"
-    facilitiesSection.append(wrapper)
-    
-    facilities.options.forEach((option) => {
-      let facilitiesCards = document.createElement("article");
-      facilitiesCards.classList = "facilitiesCards";
-      
-      let image = document.createElement("img");
-      let headline = document.createElement("h2");
-      let text = document.createElement("p");
-      let link = document.createElement("a");
-      
-      image.src = option.icon;
-      headline.textContent = option.headline;
-      text.textContent = option.text;
-      link.textContent = option.a;
-      
-      
-      facilitiesCards.append(image);
-      facilitiesCards.append(headline);
-      facilitiesCards.append(text);
-      facilitiesCards.append(link);
-      
-      
-      wrapper.append(facilitiesCards);
-    });
-    
+  // facilities start------------------------------------------------------
 
-    // facilities slut-------------------------------------------------------
+  let facilitiesSection = document.querySelector(".facilities");
 
+  let headingTwo = document.createElement("h2");
+  headingTwo.textContent = facilities.headline;
+  facilitiesSection.append(headingTwo);
+  headingTwo.classList = "h2-overskrift";
+
+  let wrapper = document.createElement("div");
+  wrapper.classList = "wrapper";
+  facilitiesSection.append(wrapper);
+
+  facilities.options.forEach((option) => {
+    let facilitiesCards = document.createElement("article");
+    facilitiesCards.classList = "facilitiesCards";
+
+    let image = document.createElement("img");
+    let headline = document.createElement("h2");
+    let text = document.createElement("p");
+    let link = document.createElement("a");
+
+    image.src = option.icon;
+    headline.textContent = option.headline;
+    text.textContent = option.text;
+    link.textContent = option.a;
+
+    facilitiesCards.append(image);
+    facilitiesCards.append(headline);
+    facilitiesCards.append(text);
+    facilitiesCards.append(link);
+
+    wrapper.append(facilitiesCards);
+  });
+
+  // facilities slut-------------------------------------------------------
+
+  // sites start-------------------------------------------------------
+
+  let sitesSection = document.querySelector(".sites");
+
+  // wrapper
+  let div = document.createElement("div");
+  div.classList = "wrapperTwo";
+  sitesSection.append(div);
+
+  //overskrift
+  let headingThree = document.createElement("h2");
+  headingThree.textContent = sites.headline;
+  headingThree.classList = "h2-overskrift-three";
+  div.append(headingThree);
+
+  // paragraf
+  let headingText = document.createElement("p");
+  headingText.textContent = sites.text;
+  div.append(headingText);
+  headingText.classList = "heading-p";
+
+  // btnicon
+  let btn = document.createElement("button");
+  btn.classList = "btn";
+  btn.innerHTML = `<img src="${sites.btnicon}">Start`;
+  div.append(btn);
+
+  // article
+  sites.places.forEach((place) => {
+    let sitesCards = document.createElement("article");
+    sitesCards.classList = "sitesCards";
+
+    let image = document.createElement("img");
+    let name = document.createElement("h3");
+    let city = document.createElement("p");
+    let link = document.createElement("a");
+
+    image.src = place.img;
+    name.textContent = place.name;
+    city.textContent = place.city;
+    link.textContent = place.link;
+
+    sitesCards.append(image);
+    sitesCards.append(name);
+    sitesCards.append(city);
+    sitesCards.append(link);
+
+    sitesSection.append(sitesCards);
+  });
+
+  // sites slut-------------------------------------------------------
 });
-
