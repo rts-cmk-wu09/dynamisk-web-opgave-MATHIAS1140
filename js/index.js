@@ -205,23 +205,23 @@ document.addEventListener("DOMContentLoaded", function () {
   footerSec.append(container);
 
   // højre div
-  let right_div = document.createElement("div");
-  right_div.classList = "right_div";
-  container.append(right_div);
+  let left_div = document.createElement("div");
+  left_div.classList = "left_div";
+  container.append(left_div);
 
   // overskrift
   let overskrift = document.createElement("h2");
   overskrift.textContent = footerData.headline;
-  right_div.append(overskrift);
+  left_div.append(overskrift);
 
   // tekst
   let text = document.createElement("p");
   text.textContent = footerData.text;
-  right_div.append(text);
+  left_div.append(text);
 
   // container til info
   let infoWrapper = document.createElement("section");
-  infoWrapper.classList = "inforWrapper";
+  infoWrapper.classList = "infoWrapper";
   container.append(infoWrapper);
 
   // loop til footerData
@@ -237,39 +237,38 @@ document.addEventListener("DOMContentLoaded", function () {
     let list = document.createElement("ul");
     card.append(list);
 
-    information.links.forEach((link) => {
+    info.links.forEach((link) => {
       let item = document.createElement("li");
       list.append(item);
       let a = document.createElement("a");
       item.append(a);
-      a.src = info.link
+      a.textContent = info.link;
       a.innerText = link;
       a.href = "#";
     });
   });
 
-
   // loop for bund-section
   let buttom_section = document.createElement("section");
   buttom_section.classList = "buttom_section";
-  footer.append(buttom_section);
+  footerSec.append(buttom_section);
 
   let right = document.createElement("p");
   right.textContent = footerData.rights;
   buttom_section.append(right);
-
   let buttomList = document.createElement("ul");
   buttom_section.append(buttomList);
-  
-  footerData.forEach((link) => {
+
+  footerData.bottomLinks.forEach((link) => {
+
     let item = document.createElement("li");
     buttomList.append(item);
 
     let a = document.createElement("a");
     item.append(a);
-    a.href = footerData.bottomLinks
+    a.textContent = footerData.bottomLinks;
     a.innerText = link;
-    a.href = "#"
+    a.href = "#";
   });
 
   // footer slut------------------------------------------------------------
