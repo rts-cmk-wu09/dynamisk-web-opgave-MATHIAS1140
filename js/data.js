@@ -73,7 +73,6 @@ let sites = {
       name: "Lucciano",
       city: "Rome",
       link: "View this site",
-
     },
     {
       img: "https://dazzling-squirrel-77a63d.netlify.app/imgs/cremonesi.png",
@@ -107,5 +106,28 @@ let advantages = [
     text: "You don’t have to find out later or only after camenierk and trarsparent Easyamper ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of 5",
   },
 ];
+
+let footerData = {
+  
+    headline: "Easy Camper",
+    Text: "When Passion Meets Comfort",
+  infrormation: [
+    {
+      headline: "Discover the Network",
+      links: ["Where to shop", "Tour Guided", "Our Tours", "About us"]
+    },
+    {
+      headline: "Become a Manager",
+      links: ["Join your Pairing", "Offer your Service", "Are you a Guide"]
+    },
+    {
+      headline: "Assistance",
+      links: ["Support Center", "FAQs", "Cancellation Option", "Reliability and Sequrity"]
+    },
+  ],
+  
+  rights: "EazyCamper. All rights reserved.",
+  bottomLinks: ["About", "Site map", "Terms", "Privacy policy", "Teams"],
+}
 
 // Opret dit dataobjekt til footerens indhold herunder

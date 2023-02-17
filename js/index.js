@@ -168,7 +168,6 @@ document.addEventListener("DOMContentLoaded", function () {
   advantagesSection.append(headingFour);
   headingFour.classList = "h2-overskrift";
 
-
   advantages.forEach((advantage) => {
     let advantagesArticle = document.createElement("article");
     advantagesArticle.classList = "advantagesArticle";
@@ -189,9 +188,84 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // advantages slut--------------------------------------------------------
 
-
   // footer start-----------------------------------------------------------
-  
+
+  // led efter root-tagget "<body>"
+  let body = document.querySelector("body");
+  // skab elementet <footer>
+  let footer = document.createElement("footer");
+  // lav en klasse til <footer>
+  footer.classList = "footer";
+  // inject det ind i <body>
+  body.append(footer);
+
+  // øverste container
+  let container = document.createElement("div");
+  container.classList = "footer_container";
+  footer.append(container);
+
+  // højre div
+  let right_div = document.createElement("div");
+  right_div.classList = "right_div";
+  container.append(right_div);
+
+  // overskrift
+  let overskrift = document.createElement("h2");
+  overskrift.textContent = footerData.text;
+  right_div.append(overskrift);
+
+  // tekst
+  let text = document.createElement("p");
+  text.textContent = footerData.text;
+  right_div.append(text);
+
+  // container til info
+  let infoWrapper = document.createElement("section");
+  infoWrapper.classList = "inforWrapper";
+  container.append(infoWrapper);
+
+  // loop til footerData
+  footerData.information.forEach((info) => {
+    let card = document.createElement("section");
+    card.classList = "info_section";
+    infoWrapper.append(card);
+
+    let title = document.createElement("h2");
+    title.textContent = info.title;
+    card.append(title);
+
+    let list = document.createElement("ul");
+    card.append(list);
+
+    info.link.forEach((link) => {
+      let item = document.createElement("li");
+      list.append(item);
+      let a = document.createElement("a");
+      item.append("a");
+      a.innerText = link;
+      a.href = "#";
+    });
+  });
+
+  let buttom_section = document.createElement("section");
+  buttom_section.classList = "buttom_section";
+  footer.append(buttom_section);
+
+  let right = documnt.createElement("p");
+  right.textContent = footerData.rights;
+  buttom_section.append(right);
+
+  let buttomList = document.createElement("ul");
+  buttom_section.append(buttomList);
+  footerData.forEach((link) => {
+    let item = document.createElement("li");
+    buttomList.append(item);
+
+    let a = document.createElement("a");
+    item.append(a);
+    a.innerText = link;
+    a.href = "#"
+  });
 
   // footer slut------------------------------------------------------------
 });
