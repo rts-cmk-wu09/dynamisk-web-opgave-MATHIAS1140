@@ -193,16 +193,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // led efter root-tagget "<body>"
   let body = document.querySelector("body");
   // skab elementet <footer>
-  let footer = document.createElement("footer");
+  let footerSec = document.createElement("footer");
   // lav en klasse til <footer>
-  footer.classList = "footer";
+  footerSec.classList = "footer";
   // inject det ind i <body>
-  body.append(footer);
+  body.append(footerSec);
 
   // øverste container
   let container = document.createElement("div");
   container.classList = "footer_container";
-  footer.append(container);
+  footerSec.append(container);
 
   // højre div
   let right_div = document.createElement("div");
@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // overskrift
   let overskrift = document.createElement("h2");
-  overskrift.textContent = footerData.text;
+  overskrift.textContent = footerData.headline;
   right_div.append(overskrift);
 
   // tekst
@@ -231,38 +231,43 @@ document.addEventListener("DOMContentLoaded", function () {
     infoWrapper.append(card);
 
     let title = document.createElement("h2");
-    title.textContent = info.title;
+    title.textContent = info.headline;
     card.append(title);
 
     let list = document.createElement("ul");
     card.append(list);
 
-    info.link.forEach((link) => {
+    information.links.forEach((link) => {
       let item = document.createElement("li");
       list.append(item);
       let a = document.createElement("a");
-      item.append("a");
+      item.append(a);
+      a.src = info.link
       a.innerText = link;
       a.href = "#";
     });
   });
 
+
+  // loop for bund-section
   let buttom_section = document.createElement("section");
   buttom_section.classList = "buttom_section";
   footer.append(buttom_section);
 
-  let right = documnt.createElement("p");
+  let right = document.createElement("p");
   right.textContent = footerData.rights;
   buttom_section.append(right);
 
   let buttomList = document.createElement("ul");
   buttom_section.append(buttomList);
+  
   footerData.forEach((link) => {
     let item = document.createElement("li");
     buttomList.append(item);
 
     let a = document.createElement("a");
     item.append(a);
+    a.href = footerData.bottomLinks
     a.innerText = link;
     a.href = "#"
   });

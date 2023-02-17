@@ -110,8 +110,8 @@ let advantages = [
 let footerData = {
   
     headline: "Easy Camper",
-    Text: "When Passion Meets Comfort",
-  infrormation: [
+    text: "When Passion Meets Comfort",
+  information: [
     {
       headline: "Discover the Network",
       links: ["Where to shop", "Tour Guided", "Our Tours", "About us"]
