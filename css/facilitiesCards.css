@@ -1,0 +1,48 @@
+.facilities{
+    display: flex;
+    flex-direction: column;
+}
+
+.facilitiesCards{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    font-size: xx-small;
+    
+}
+
+.facilitiesCards > h2{
+    font-size: 20px;
+}
+
+.facilitiesCards > p{
+    margin-top: 25px;
+    font-size: 12px;
+}
+
+.facilitiesCards > a{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    color: var(--orangeTema-color);
+    font-size: 16px;
+}
+
+.facilitiesCards > img{
+    width: 20px;
+    margin-bottom: 50px;
+}
+
+.h2-overskrift{
+    margin-left: 250px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    font-size: 32px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+

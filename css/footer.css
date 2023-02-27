@@ -1,0 +1,83 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+.footer{
+    width: 1440px;
+    height: 575px;
+    background-color: #F7F7F7;
+    margin: auto;
+}
+
+.sectionWithHeadingTwo{
+    width: 400px;
+    height: 600px;
+}
+
+.footer_container{
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    /* border: rgb(200, 0, 255) 2px solid; */
+    
+}
+
+.left_div{
+    /* border: red 2px solid; */
+    margin-top: 70px;
+}
+
+.left_div > p{
+    margin-top: 10px;
+    font-size: 350%;
+    width: 250px;
+}
+
+.infoWrapper{
+    /* border: rgb(0, 255, 102) 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: 70px;
+}
+
+.info_section > ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.info_section > ul > li {
+    margin-top: 25px;
+}
+
+.info_section > ul > li > a {
+    margin-top: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.buttom_section{
+    display: flex;
+    justify-content: space-between;
+    /* border: rgb(25, 0, 255) 2px solid; */
+    margin-top: 140px;
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
+.buttom_section > ul {
+    display: flex;
+    justify-content: space-between;
+    /* border: red 2px solid; */
+    width: 500px;
+    list-style: none;
+
+}
+
+.buttom_section > ul > li > a {
+    text-decoration: none;
+    color: black;
+}

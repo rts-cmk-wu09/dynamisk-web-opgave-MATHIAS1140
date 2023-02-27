@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.advantages{
+    margin-top: 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.wrapperThree{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.advantagesArticle{
+    width: 350px;
+}
+
+.advantagesArticle > img{
+    width: 20px;
+    height: 20px;
+}
+
+.advantagesArticle > h2{
+   margin-top: 40px;
+}
+
+.advantagesArticle > p{
+    margin-top: 70px;
+}
+
